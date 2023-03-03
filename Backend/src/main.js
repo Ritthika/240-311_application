@@ -21,7 +21,7 @@ app.use(compression({
 
 app.get('/', (req, res) => {
     res.type('text/plain')
-    res.send('about');
+    res.send('tester');
 })
 
 
