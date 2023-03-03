@@ -1,11 +1,16 @@
 const express = require('express');
 const compression = require('compression');
-const connectDB = require('./config/db')
+
 
 const app = express();
 const port = process.env.port || 6969;
 
-connectDB();
+const mongoose = require('mongoose');
+
+mongoose.connect('mongodb+srv://6310110625:1234@311-webapp.crrlhxw.mongodb.net/?retryWrites=true&w=majority')
+        .then(() => console.log('Connection DB success'))
+        .catch((err) => console.error(err));
+
 
 app.listen(port, ()=> {
     console.log(`server is runing on port ${port}`);
