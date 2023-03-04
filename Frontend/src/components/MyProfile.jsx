@@ -6,7 +6,7 @@ function MyProfile({data}) {
         <p>
             MY NAME IS {data.firstName} {data.lastName}
         </p>
-        <img src ={data.imgPic} ></img>
+        <img src ={data.imgPic} alt = {data.firstName}></img>
     </div>
   )
 }
