@@ -18,6 +18,13 @@ function App() {
     { title: 'Apple', id: 3 },
   ];
 
+  function handleClick(){
+    setCount (count + 1)
+  }
+  function handleClickde(){
+    setCount (count - 1)
+  }
+
   return (
     //react Fragment
     <> 
@@ -25,6 +32,9 @@ function App() {
       <p>MY NAME is {user.firstName} {user.lastName}</p>
       <img src={user.imgPic} width = "1280" height= "750" alt="" />
       <p>{name}</p>
+      <p>{count}</p>
+      <button onClick={handleClick}>Increase</button>
+      <button onClick={handleClickde}>decrease</button>
       <MyButton />
       <ul>
         {products.map(product =>(
