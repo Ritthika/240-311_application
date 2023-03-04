@@ -2,6 +2,7 @@ import { useState } from 'react'
 import reactLogo from './assets/react.svg'
 import './App.css'
 import MyButton from './components/MyButton'
+import MyProfile from './components/MyProfile'
 
 function App() {
   const [count, setCount] = useState(0)
@@ -29,8 +30,7 @@ function App() {
     //react Fragment
     <> 
       <h1>WELLCOME TO MY APP</h1>
-      <p>MY NAME is {user.firstName} {user.lastName}</p>
-      <img src={user.imgPic} width = "1280" height= "750" alt="" />
+      <MyProfile data ={user}/>
       <p>{name}</p>
       <p>{count}</p>
       <button onClick={handleClick}>Increase</button>
