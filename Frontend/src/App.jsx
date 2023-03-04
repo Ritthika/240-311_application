@@ -12,6 +12,11 @@ function App() {
     lastName : "user",
     imgPic : "https://i.ytimg.com/vi/nvYmvrnod18/maxresdefault.jpg"
   }
+  const products = [
+    { title: 'Cabbage', id: 1 },
+    { title: 'Garlic', id: 2 },
+    { title: 'Apple', id: 3 },
+  ];
 
   return (
     //react Fragment
@@ -21,6 +26,11 @@ function App() {
       <img src={user.imgPic} width = "1280" height= "750" alt="" />
       <p>{name}</p>
       <MyButton />
+      <ul>
+        {products.map(product =>(
+          <li key={product.id}>{product.title}</li>
+        ))}
+      </ul>
     </>
   )
 }
