@@ -13,7 +13,7 @@ const lotterys =[
 	},
     {
 		title: "ลอตเตอรี่04",
-		thumbnaiUrl:"/images/demo-lottery04.jfif"
+		thumbnaiUrl:"/images/demo-lottery04.jpg"
 	},
 	{
 		title: "ลอตเตอรี่05",

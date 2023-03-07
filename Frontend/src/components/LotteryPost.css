@@ -22,7 +22,7 @@
 .lottery-post-content{
     position: relative;
     max-width: 1200px;
-    background-color: black;
+    background-color: rgb(4, 242, 246);
     margin-left: auto;
     margin-right: auto;
 }
@@ -36,6 +36,6 @@
 }
 
 .lottery-post-content h4{
-    color: white;
+    color: rgb(99, 9, 9);
     text-align: center;
 }

@@ -7,14 +7,23 @@ import LotteryPost from './components/LotteryPost'
 import lotterys from '../data/lotterys'
 
 function App() {
-	const [selectedLottery, setselectedLottery] = useState(lotterys[1]);
+	const [selectedLottery, setselectedLottery] = useState(null);
+
+	function onLotteryOpenClick(theLottery){
+		setselectedLottery(theLottery);
+	} 
+
+	function onLotteryCloseClick(){
+		setselectedLottery(null);
+	}
+
 	const lotteryElements = lotterys.map((lottery, index) => {
-		return <LotteryItem key={index} lottery={lottery}/>;
+		return <LotteryItem key={index} lottery={lottery} onLotteryClick ={ onLotteryOpenClick}/>;
 	});
 
 	let loteryPost = null;
 	if(!!selectedLottery){
-		loteryPost =<LotteryPost lottery={selectedLottery}/>
+		loteryPost =<LotteryPost lottery={selectedLottery} onBgClick = {onLotteryCloseClick}/>
 	}
 
   return (
