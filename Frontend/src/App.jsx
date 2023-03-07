@@ -3,6 +3,7 @@ import reactLogo from './assets/react.svg'
 import './App.css'
 import AppHeader from './components/AppHeader'
 import LotteryItem from './components/LotteryItem'
+import LotteryPost from './components/LotteryPost'
 
 function App() {
   return (

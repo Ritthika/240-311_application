@@ -1,3 +1,5 @@
+import './LotteryItem.css';
+
 function LotteryItem(){
     return(
         <div className="lottery-item">
