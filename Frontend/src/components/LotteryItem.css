@@ -1,5 +1,19 @@
 .lottery-item{
     display: block;
+    text-align: center;
     height: 100%;
     width: 100%;
+}
+
+.lottery-item h2{
+    color: #2c2626;
+    text-align: center;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    text-shadow: 0.1em 0.1em 0.2em rgb(118, 233, 229);
+    padding: 2px;
+    border: 3px solid rgb(3, 243, 235);
+}
+
+.lottery-item img{
+    border: 3px solid rgb(0, 0, 0);
 }

@@ -6,7 +6,7 @@ function LotteryPost(props){
            <div className="lottery-post-bg" onClick ={onBgClick}/>
            <div className="lottery-post-content">
                 <img src={lottery.thumbnaiUrl} />
-                <h4>{lottery.title}</h4>
+                <h3>{lottery.title}</h3>
            </div>
         </div>
     )

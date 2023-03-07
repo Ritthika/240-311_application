@@ -33,9 +33,10 @@
     max-height: calc(100vh - 120px);
     margin-left: auto;
     margin-right: auto;
+    border: 5px solid rgb(3, 243, 235);
 }
 
-.lottery-post-content h4{
-    color: rgb(99, 9, 9);
+.lottery-post-content h3{
+    color: rgb(90, 18, 18);
     text-align: center;
 }

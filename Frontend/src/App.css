@@ -1,10 +1,17 @@
+
+.app-section{
+    background-color: rgb(194, 230, 230);
+    padding: 30px;
+}
+
+.app-container{
+    max-width: 250px;
+    margin-right: 70px;
+}
+
 .app-grid{
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     column-gap: 16px;
     row-gap: 16px;
-    max-width: 250px;
-    margin-left: 30px;
-    margin-right: 30px;
-    padding: 30px;
 }

@@ -5,7 +5,7 @@ function LotteryItem(props){
     return(
         <div className="lottery-item">
 			<img height="220px" src={lottery.thumbnaiUrl} onClick={() => {onLotteryClick(lottery)}} /> 
-			<h4>{lottery.title}</h4>
+			<h2>{lottery.title}</h2>
 		</div>
     )
 }

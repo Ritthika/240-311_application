@@ -1,11 +1,14 @@
 .app-header{
-    border-bottom: 1px solid gray;
+    background-color: rgb(17, 208, 205);
+    border-bottom: 3px solid rgb(0, 0, 0);
     height:  70px;
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
-.app-header-logo{
-    height: 60px;
+.app-header h1{
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    color: #ffffff;
+    text-shadow: 0.1em 0.1em 0.2em black;
 }
