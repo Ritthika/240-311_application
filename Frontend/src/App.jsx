@@ -4,16 +4,17 @@ import './App.css'
 import AppHeader from './components/AppHeader'
 import LotteryItem from './components/LotteryItem'
 import LotteryPost from './components/LotteryPost'
+import lotterys from '../data/lotterys'
 
 function App() {
+	const lotteryElements = lotterys.map((lottery, index) => {
+		return <LotteryItem key={index} lottery={lottery}/>;
+	})
   return (
   <div className="App">
 	<AppHeader />
 	<div className="app-grid">
-		<LotteryItem /> <LotteryItem /> <LotteryItem /> 
-		<LotteryItem /> <LotteryItem /> <LotteryItem />
-		<LotteryItem /> <LotteryItem /> <LotteryItem />
-		<LotteryItem /> <LotteryItem /> <LotteryItem />
+		{lotteryElements}
 	</div>
   </div> 
    
