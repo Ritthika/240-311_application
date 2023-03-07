@@ -7,15 +7,23 @@ import LotteryPost from './components/LotteryPost'
 import lotterys from '../data/lotterys'
 
 function App() {
+	const [selectedLottery, setselectedLottery] = useState(lotterys[1]);
 	const lotteryElements = lotterys.map((lottery, index) => {
 		return <LotteryItem key={index} lottery={lottery}/>;
-	})
+	});
+
+	let loteryPost = null;
+	if(!!selectedLottery){
+		loteryPost =<LotteryPost lottery={selectedLottery}/>
+	}
+
   return (
   <div className="App">
 	<AppHeader />
 	<div className="app-grid">
 		{lotteryElements}
 	</div>
+	{loteryPost}
   </div> 
    
   )
