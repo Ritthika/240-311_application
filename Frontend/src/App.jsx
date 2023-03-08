@@ -6,6 +6,7 @@ import LotteryItem from './components/LotteryItem'
 import LotteryPost from './components/LotteryPost'
 import lotterys from '../data/lotterys'
 import AppSearch from './components/AppSearch'
+import LoginPage from './components/LoginPage'
 
 function App() {
 	const [selectedLottery, setselectedLottery] = useState(null);
@@ -31,7 +32,8 @@ function App() {
 
   return (
   <div className="App">
-	<AppHeader />
+	<AppHeader /> 
+	<LoginPage />
 	<section className="app-section">
 		<div className = "app-container">
 			<AppSearch value ={searchText} onValueChange={setSearchText} />
