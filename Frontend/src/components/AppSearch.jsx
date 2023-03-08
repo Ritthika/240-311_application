@@ -12,6 +12,7 @@ function AppSearch(props){
 			onChange={(event) => {onValueChange(event.target.value)}}
 		/>
 	</div>
+	
     );
 }
 

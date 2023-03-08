@@ -33,7 +33,6 @@ function App() {
   return (
   <div className="App">
 	<AppHeader /> 
-	<LoginPage />
 	<section className="app-section">
 		<div className = "app-container">
 			<AppSearch value ={searchText} onValueChange={setSearchText} />
