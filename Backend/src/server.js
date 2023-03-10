@@ -6,6 +6,7 @@ app.use(cors());
 
 
 const mongoose = require('mongoose');
+mongoose.Promise = global.Promise;
 mongoose.connect('mongodb+srv://6310110625:1234@311-webapp.crrlhxw.mongodb.net/?retryWrites=true&w=majority')
         .then(() => console.log('Connection DataBase success'))
         .catch((err) => console.error(err));
