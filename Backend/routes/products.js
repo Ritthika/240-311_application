@@ -1,41 +1,32 @@
 const express = require('express');
 const router = express.Router();
 const mongoose = require('mongoose');
-const Product = require('../amongoose/products.js');
+const Product = require('../amongoose/Product');
 
-router.get('/', (req, res, next) => {
-    Product.find((err, products) => {
-        if (err) return next(err);
-        res.json(products);
-    })
+router.get('/', async (req, res) => {
+    const products = await Product.find({});
+    res.json(products);
 })
 
-router.get('/:id', (req, res, next) => {
-    Product.findById(req.params.id, (err, post) => {
-        if (err) return next(err);
-        res.json(post);
-    })
+router.post('/', async (req, res) => {
+    const payload = req.body;
+    const product = new Product(payload);
+    await product.save();
+    res.status(201).end();
 })
 
-router.post('/', (req, res, next) => {
-    Product.create(req.body, (err, post) => {
-        if (err) return next(err);
-        res.json(post);
-    })
+router.put('/:id', async (req, res) => {
+    const payload = req.body;
+    const { id } = req.params;
+    const products = await Product.findByIdAndUpdate(id, { $set: payload });
+    res.json(products);
 })
 
-router.put('/:id', (req, res, next) => {
-    Product.findByIdAndUpdate(req.params.id, req.body, (err, post) => {
-        if (err) return next(err);
-        res.json(post);
-    })
+router.delete('/:id', async (req, res) => {
+    const payload = req.body;
+    const products = await Product.findByIdAndDelete({id});
+    res.status(204).end();
 })
 
-router.delete('/:id', (req, res, next) => {
-    Product.findByIdAndDelete(req.params.id, (err, post) => {
-        if (err) return next(err);
-        res.json(post);
-    })
-})
 
 module.exports = router;
