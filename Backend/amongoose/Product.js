@@ -7,7 +7,8 @@ const ProductSchema = new Schema(
         prod_price: Number,
     },
     {
-        timestamps: true, versiionKey: false
+        timestamps: true, 
+        versionKey: false
     }
 );
 
