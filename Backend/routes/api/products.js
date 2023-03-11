@@ -18,7 +18,9 @@ router.post('/api', async (req, res) => {
 router.put('/api/:id', async (req, res) => {
     const payload = req.body;
     const { id } = req.params;
-    const product = await Product.findByIdAndUpdate(id, { $set: payload });
+    const product = await Product.findByIdAndUpdate(id, payload, { returnOriginal: false });
+    console.log(payload);
+    console.log(id);
     res.json(product);
 })
 
