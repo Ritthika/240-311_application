@@ -8,6 +8,12 @@ router.get('/api', async (req, res) => {
     res.json(products);
 })
 
+router.get('/api/:id', async (req, res) => {
+    const { id } = req.params;
+    const product = await Product.findById(id);
+    res.json(product);
+})
+
 router.post('/api', async (req, res) => {
     const payload = req.body;
     const product = new Product(payload);
@@ -19,8 +25,6 @@ router.put('/api/:id', async (req, res) => {
     const payload = req.body;
     const { id } = req.params;
     const product = await Product.findByIdAndUpdate(id, payload, { returnOriginal: false });
-    console.log(payload);
-    console.log(id);
     res.json(product);
 })
 

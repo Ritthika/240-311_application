@@ -32,7 +32,12 @@ app.use(compression({
     threshold: 0
 }));
 
-
+app.use((req, res) => {
+    res.type('text/plain')
+    res.status(404)
+    res.send('404 not found')
+  })
+  
 const morgan = require('morgan');
 const fs = require('fs');
 const path = require('path');
